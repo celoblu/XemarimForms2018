@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pag="clr-namespace:App02_Xamarim.Pages"
+             x:Class="App02_Xamarim.Master.Menu">
+
+    <MasterDetailPage.Master>
+
+        <!-- Menu -->
+        <ContentPage Title="Menu" BackgroundColor="#0D1F2D">
+            <StackLayout>
+                <StackLayout BackgroundColor="#FFC926" Padding="0">
+                    <Image HorizontalOptions="Center" VerticalOptions="Center" Source="Logo.jpg"/>
+                </StackLayout>
+
+                <StackLayout Spacing="5">                    
+                    <Button Text="Marcelo de Borba" TextColor="White" FontSize="28" BackgroundColor="Transparent" Clicked="GoPaginaPerfil1"/>
+                    <Button Text="Marcos José de Borba" TextColor="White" FontSize="28" BackgroundColor="Transparent"/>
+                    <Button Text="Fabio Eduardo de Borba" TextColor="White" FontSize="28" BackgroundColor="Transparent"/>
+                    <Button BackgroundColor="Transparent"/>
+                    <Button Text="Sobre HTS" TextColor="White" FontSize="24" BackgroundColor="Transparent" Clicked="GoPaginaXemarim"/>
+                </StackLayout>
+
+            </StackLayout>
+        </ContentPage>
+
+    </MasterDetailPage.Master>
+
+
+    <MasterDetailPage.Detail>
+        <!-- Paginas -->
+        <NavigationPage>
+            <x:Arguments>
+                <pag:Perfil1/>                
+            </x:Arguments>
+        </NavigationPage>        
+    </MasterDetailPage.Detail>
+
+
+</MasterDetailPage>

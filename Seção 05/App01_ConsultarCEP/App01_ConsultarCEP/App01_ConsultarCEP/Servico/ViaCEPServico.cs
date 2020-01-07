@@ -11,21 +11,21 @@ namespace App01_ConsultarCEP.Servico
     {
         private static string EnderecoUrl = "http://viacep.com.br/ws/{0}/json/";
 
-        public static Endereco BuscarenderecoCEP(string cep)
+        public static Endereco BuscarenderecoCEP(string cep)        
         {
             string NovoEnderecoURL = string.Format(EnderecoUrl, cep);
 
             WebClient wc = new WebClient();
-            string Conteudo = wc.DownloadString(NovoEnderecoURL); // metodo sincrono(tela fica travada)            
+            string Conteudo = wc.DownloadString(NovoEnderecoURL); // metodo sincrono(tela fica travada) 
+
             Endereco end = JsonConvert.DeserializeObject<Endereco>(Conteudo);
 
-            if(end.cep == null)
+            if (end.cep == null)
             {
                 return null;
             }
                                 
             return end;
         }
-
     }
 }

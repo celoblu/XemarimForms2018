@@ -13,7 +13,8 @@
         <Label Text="" x:Name="RESULTADO"
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand"
-           TextColor="Blue"    />
+           TextColor="Blue"/>
+        
     </StackLayout>
 
 </ContentPage>

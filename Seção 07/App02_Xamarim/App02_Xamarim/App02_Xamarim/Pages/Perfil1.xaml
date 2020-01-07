@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App02_Xamarim.Pages.Perfil1">
+    
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            
+            <RelativeLayout VerticalOptions="Start" HeightRequest="300">
+                <Image Source="fundo.png" 
+                       RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                       />
+
+                <Image Source="perfil.png" 
+                       x:Name="Perfil"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Factor=.50, Property=Width, Constant=-60}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.20}"                       
+                       WidthRequest="120"
+                       />
+                <Label Text="Procura-se" TextColor="Red" FontSize="22"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Perfil, Property=X}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Perfil, Property=Y, Constant=180}"
+                       />
+            </RelativeLayout>
+            
+            <Grid HeightRequest="120" BackgroundColor="BlueViolet">
+                <!-- configuração das Colunas-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/> <!--* = igual tamnho total -->
+                    <ColumnDefinition Width="*"/> 
+                </Grid.ColumnDefinitions>
+                <!-- Definição das Linhas-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>  <!-- Grid com apenas uma linha -->
+                </Grid.RowDefinitions>
+                
+                
+                <StackLayout Grid.Column="0" Grid.Row="0"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="18" TextColor="White" FontSize="32"/>
+                    <Label Text="Anos" HorizontalTextAlignment="Center" TextColor="White" FontSize="32"/>
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="22/09/1966" TextColor="White" FontSize="32"/>
+                    <Label Text="Nasceu" HorizontalTextAlignment="Center" TextColor="White" FontSize="32"/>
+                </StackLayout>
+
+            </Grid>
+            
+            <StackLayout Padding="25" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Label Text="Marcelo Co-fundador HTS Informatica e Seu Sócio Flavio Bett. &#10;
+                             Marcelo aplicou golpe e assumiu a empresa em 1997, &#10;
+                       Hoje reconhecida nacionalmente como uma grande enroladora e com aplicativos 
+                    de baixa qualidade vem se destacando entre a demais sempre enrolando seus clientes!" 
+                       HorizontalTextAlignment="Center"/>                
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

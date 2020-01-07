@@ -61,8 +61,7 @@ namespace App01_ConsultarCEP
                Valido = false;
             }
           
-            int NovoCEP = 0;
-
+            int NovoCEP = 0;                        
             if (!int.TryParse(cep, out NovoCEP))
             {
 

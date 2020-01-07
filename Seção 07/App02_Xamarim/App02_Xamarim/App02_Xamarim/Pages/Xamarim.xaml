@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App02_Xamarim.Pages.Xamarim">
+    <ContentPage.Content>
+        
+        <StackLayout Spacing="0">
+            
+            <StackLayout BackgroundColor="Aquamarine" Padding="10">
+                <Image Source="logo.jpg" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout HeightRequest="100" Padding="30" BackgroundColor="BlueViolet">
+                <Label Text="HTS - Informática Ltda" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" 
+                       FontSize="48"  />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <RelativeLayout HorizontalOptions="FillAndExpand">
+                    <BoxView x:Name="Box1" BackgroundColor="Purple" WidthRequest="30" HeightRequest="30"/>
+                    
+                    <BoxView x:Name="Box2"
+                             RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Box1, Property=X, Factor=1, Constant=12}"
+                             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Box1, Property=Y , Factor=1, Constant=12}"
+                             BackgroundColor="Blue" WidthRequest="30" HeightRequest="30"/>
+
+                    <BoxView RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Box2, Property=X, Factor=1, Constant=12}"
+                             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Box2, Property=Y , Factor=1, Constant=12}"                        
+                        BackgroundColor="BlueViolet" WidthRequest="30" HeightRequest="30"/>
+                </RelativeLayout>
+                
+                <Label Text="Empresa" TextColor="RoyalBlue" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" 
+                       FontSize="48" BackgroundColor="White"/>               
+            </StackLayout>
+            
+            <StackLayout>
+                <Label Text="A HTS - Soluções em Informática &#10; 
+                       é uma empresa fundada em 00 de Janeiro de 1995 em Blumenau, &#10;
+                       Santa Catarina, Região Sul do Brasil. &#10;
+                       Os Fundadores Marcelo B. e Flavio B. &#10;
+                       antenados com a Moda sempre belos e Chiques" 
+                       TextColor="Gold" BackgroundColor="White" HorizontalTextAlignment="Center"
+                       />
+            </StackLayout>
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
